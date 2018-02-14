@@ -1,0 +1,22 @@
+%programa metodo de newton 
+function x=newton3(f,f1,x0,n)
+%inicializamos
+x=x0;
+%6 = numero de iteraciones
+for i=1:n;
+    Iter(i)=i; %generando un vector de 1 renglon n columnas
+    Aprox(i)=x; %Vector de 1*n
+    Resid(i)=abs(f(x))
+%se declara el metodo
+    x=x-(f(x)/f1(x))
+    %para cerrar el for
+    [Iter',Aprox', Resid']
+end
+%para cerrar la funcion
+end
+
+
+% ventana de comando
+f=@(x)x.^3-7;
+f1=@(x)3*(x^2);
+x=newton3(f,f1,1.5,10)
