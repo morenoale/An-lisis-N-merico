@@ -1,0 +1,7 @@
+%Programa para factoriales
+function y=factorial(n)
+producto=1  
+for i=1:n %el 2 signfica que realiza la suma cada dos numeros empezando en 1 
+    producto=producto*i;
+end
+producto
