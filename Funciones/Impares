@@ -1,0 +1,7 @@
+%Programa para graficar funciones
+function y=impares(n)
+suma=0  
+for i=1:2:n %el 2 signfica que realiza la suma cada dos numeros empezando en 1 
+    suma=suma+i;
+end
+suma
