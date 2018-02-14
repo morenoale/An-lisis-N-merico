@@ -1,0 +1,8 @@
+%Programa de suma de enteros
+function y=sumatoria(n) 
+suma=0 %inicializamos valores
+for i=1:n
+    suma=suma+i; %actualiza el valor de la variable
+end 
+suma
+% se guarda con el nombre que te da el programa
