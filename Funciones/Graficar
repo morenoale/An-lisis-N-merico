@@ -1,0 +1,10 @@
+# Analisis-Numerico
+%Programa para graficar funciones
+%este es un script se puede modificar.
+x=[-5:.1:5];
+y1=x;
+y2=3*x;
+plot(x,y1,x,y2) %graficar solo en una grafica.
+% para poner diferentes colores en la grafica
+plot(x,y1,'red',x,y2,'yellow')
+grid on % para poner cuadricula en la grafica
