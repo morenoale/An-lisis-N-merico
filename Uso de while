@@ -1,0 +1,19 @@
+% Programa de uso while multiplicacion
+mult=1;
+i=1;
+while mult<15
+    mult
+    mult=mult*i;
+    i=1+i;
+end
+
+
+% Programa uso de while suma
+suma=0;
+i=1;
+while suma<9
+    suma
+    suma=suma+i;
+    i=i+1;
+end
+
