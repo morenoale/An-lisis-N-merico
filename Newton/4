@@ -1,0 +1,27 @@
+function x=newton4(f,f1,x0,n,tol)
+x=x0;
+i=1;
+while abs(f(x))>tol & i <n
+    Iter(i)=i;
+    Aprox(i)=x;
+    Resid(i)=abs(f(x));
+    x=x-f(x)/f1(x)
+    i=i+1;
+end
+[Iter',Aprox',Resid']
+end
+
+
+% ACTIVIDAD
+% 1) Hacer newton4 en script
+% 2) Usar la funcion f(x) = 10x^2-7 y su derivada
+% 3) Graficar la funcion 
+% 4) usar x0=3.4567
+% 5) hacer un analisis de lo que sucede al usar diferentes n y tol
+% (tolerancia) 
+% 6) Correr el programa desde la ventana de comandos 
+% Para escribir tolerancia escribir 1E-3
+
+% GRAFICA
+   x=[-10:0.1:10]
+   
