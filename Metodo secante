@@ -1,11 +1,12 @@
 % Programa metodo de la secante 
-function x=secante1(f,p0,p1,n)
+function x=secante1(f,p0,p1,n) % Creacion de la funcion. Con los parametro requeridos. 
 
-for i=1:n;
-     x=p1-((f(p1))*(p1-p0))/((f(p1)-f(p0)))
-     p0=p1   %Actualiza el valor
-     p1=x;
+for i=1:n; % Inicializamos con i=1. Y va cambiando el valor dependiento de la iteracion
+     x=p1-((f(p1))*(p1-p0))/((f(p1)-f(p0))) % Formula del metodo de la secante
+     p0=p1 % Actualiza la nueva aproximacion. 
+     p1=x; % p1 va tomando el valor requerido en la formula, para poder ir actuzalizando.
 end
+
 
 
 
