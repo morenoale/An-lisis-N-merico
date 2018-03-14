@@ -1,0 +1,38 @@
+% Programa matriz 
+clc 
+clear all
+n=input('Introduce dimensión de la matriz\n');
+disp('Matriz A')
+for i=1:n
+    for j=1:n
+        disp(['El Elemento(',num2str(i),',',num2str(j),')'])
+            A(i,j)=input(' ');
+    end
+end
+disp('la matriz A es: ')
+A
+
+% a) En el mismo programa, generar una matriz B
+disp('Matriz B')
+for i=1:n
+    for j=1:n
+        disp(['El Elemento(',num2str(i),',',num2str(j),')'])
+            B(i,j)=input(' ');
+    end
+end
+disp('la matriz B es: ')
+B
+
+% b) Generar una matriz C que sea la suma de A + B. 
+%disp('La matriz C es: ')
+%C=A+B;
+%C
+
+% Otra forma: 
+for i=1:n
+    for j=1:n
+            C(i,j)=A(i,j)+B(i,j);
+    end
+end
+disp('la matriz C es: ')
+C
