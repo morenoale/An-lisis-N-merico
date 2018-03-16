@@ -1,0 +1,41 @@
+%Programa matriz triangular superior e inferior
+n=input('Introduce dimensión de la matriz\n');
+
+for i=1:n
+    
+    for j=1:n
+        disp(['El elemento(',num2str(i),',',num2str(j),')'])
+        A(i,j)=input('  ');
+        
+    end
+end
+disp ('La matriz  es:')
+A
+
+
+
+S=A;
+for i=1:n
+    
+    for j=1:n
+       if i>j
+            S(i,j)=0;
+        end
+    end
+end
+disp ('La matriz  superior es:')
+S
+
+
+I=A;
+for i=1:n
+    
+    for j=1:n
+       if i<j
+            I(i,j)=0;
+        end
+    end
+end
+disp ('La matriz  inferior es:')
+I
+
