@@ -1,0 +1,66 @@
+% Actividad preliminar
+% 1) Generar una matriz nxn en nuevo programa Matlab
+% 2) Obtener la traza de esa matriz 
+% Usar de prefefencia bucle for... end 
+% trA = a11 + a23 + a33 + ... ann
+% Programa matriz 
+clc 
+clear all
+n=input('Introduce dimensión de la matriz\n');
+
+for i=1:n
+    
+    for j=1:n
+        disp(['El elemento(',num2str(i),',',num2str(j),')'])
+        A(i,j)=input('  ');
+        
+    end
+end
+disp ('La matriz  es:')
+A
+
+S=A;
+for i=1:n
+    
+    for j=1:n
+       if i>j
+            S(i,j)=0;
+        end
+    end
+end
+
+
+for i=1:n
+    
+    for j=1:n
+       if i<j
+            S(i,j)=0;
+        end
+    end
+end
+disp ('La diagonal de la matriz es:')
+S
+
+
+trS=0;
+for j=1:i
+    trS=trS+S(j,j);
+end
+disp ('La suma de la diagonal es:')
+trS
+
+trA=0;
+%for i=1:n
+    %for j=1:n
+%if i==j
+    
+    %trA= trA + A(i,j);
+%end
+    %end
+%end
+%disp ('La traza de la matriz es:')
+%trA
+
+% Con funcion de Matlab
+%t = sum(diag(S));
+%t
