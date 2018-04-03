@@ -1,0 +1,32 @@
+%Programa matriz triangular superior
+clc;
+clear all;
+fA=input('Ingresa las filas de A:=\n');
+cA=input('Ingresa las columnas de A:=\n');
+
+for i=1:fA
+    for j=1:cA
+        disp(['El elemento A(',num2str(i),',',num2str(j),')']);
+        A(i,j)=input( ' ');
+    end
+end
+
+fb=input('Ingresa las filas de b:=\n');
+for i=1:fb
+    disp(['El elemento b(',num2str(i),',',num2str(j),')']);
+    b(i)=input(' ');
+end
+
+disp(A);
+disp(b);
+x=zeros(1,fb)
+x(fb)=b(fb)/A(fA,cA);
+
+for i=fb-1:-1:1
+    s=0;
+    for j=fb:-1:i+1
+    s=s+A(i,j)*x(j);
+    x(i)=(b(i)-s)/A(i,i);
+end
+end
+disp(x);
