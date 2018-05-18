@@ -1,0 +1,28 @@
+% Metodo de Euler
+% F es la funcion dy/dt=f
+% a es el valor inicial 
+% b es el valor a cual npos queremos aproximar
+% ya equivale al valoy y(a)
+% n es el numero de saldo 
+% s es la solucion analisica de y y obtenida de s=
+% inline(dsolve(Dy=f,y(a)=c)
+
+function met_euler_aprox_error(f,a,b,ya,n,s)
+h= (b-a)/n; % Tamaño del salto 
+t=zeros(1,n+1); % Generamos un vector de salto 
+w=zeros(1,n+1); % Vector que almacena las soluciones del metodo de euler
+z=zeros(1,n+1); %Vector que almacena las soluciones del metodo analitico 
+w=zeros(1,n+1); % Vector que guarda el error en cada salto. 
+
+t(1)=a; % El primer paso es "a"
+w(1)=ya; % El valor de la condicion inicial 
+z(1)=feval(s,a); % La solucion analitica y valuada en "a"
+
+% Importante
+
+% w(1) debe ser igual a z(1) 
+
+for i=1:n
+    w(i+1)=w(i)+h*feval(f,t(i),w(i)); % aplica el metodo de euler 
+    t(i+1) =a+i*h; % Avanza al siguiente espacio t
+    z(i+1)=feval(s,t(i+1)); %evalua t(1) 
